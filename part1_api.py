@@ -33,13 +33,13 @@ def get_kernel_circle(kernel_size):
     return kernel_circle
 
 
-def filter_white_dots(c_image):
-    white_dots_filter = np.array([True for _ in range(c_image.size) for _ in range(c_image[0].size)])
-    for i in range(c_image.size):
-        for j in range(c_image[0].size):
-            if all([c_image[i, j, 0] > 250, c_image[i, j, 1] > 250, c_image[i, j, 2] > 250]):
-                white_dots_filter[i, j] = False
-    return white_dots_filter
+# def filter_white_dots(c_image):
+#     white_dots_filter = np.array([True for _ in range(c_image.size) for _ in range(c_image[0].size)])
+#     for i in range(c_image.size):
+#         for j in range(c_image[0].size):
+#             if all([c_image[i, j, 0] > 250, c_image[i, j, 1] > 250, c_image[i, j, 2] > 250]):
+#                 white_dots_filter[i, j] = False
+#     return white_dots_filter
 
 
 def get_dots(image, threshold):
